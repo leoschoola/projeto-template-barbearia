@@ -1,0 +1,14 @@
+.cabecalho__logo {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+}
+
+.cabecalho__icone {
+    width: 2rem;
+    height: 2rem;
+}
+
+.cabecalho__titulo {
+    font-weight: 300;
+}
