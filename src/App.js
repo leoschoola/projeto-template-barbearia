@@ -4,6 +4,9 @@ import './App.css';
 import Header from './components/Header';
 import CabecalhoNavegacao from './components/Header-navigation';
 import Menu from './components/Menu';
+import Main from './components/Main';
+import Services from './components/Services';
+import Footer from './components/Footer';
 
 function App() {
   const [menuAberto, setMenuAberto] = useState(false);
@@ -41,6 +44,9 @@ function App() {
           </CabecalhoNavegacao>
         </ul>
       </header>
+      <Main />
+      <Services />
+      <Footer />
     </div>
   );
 }

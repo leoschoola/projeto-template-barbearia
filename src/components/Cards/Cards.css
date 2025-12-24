@@ -1,0 +1,57 @@
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 0 1rem;
+  margin-top: 3rem;
+}
+
+.card {
+  background-color: var(--cor-branco);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card:hover .icon {
+  background-color: #dadada;
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--cor-preto);
+  margin: 0.5rem 0;
+}
+
+.card p {
+  color: var(--cor-cinza);
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+
+.card__preco {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--cor-preto);
+}
+
+.card .icon {
+  font-size: 1.5rem;
+  color: var(--cor-preto);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: #e9ecef;
+}
