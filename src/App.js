@@ -15,6 +15,14 @@ function App() {
     setMenuAberto(!menuAberto);
   }
 
+  const linksMenu = [
+    { texto: 'Início', link: '#', ativo: true },
+    { texto: 'Barbeiros', link: '#' },
+    { texto: 'Planos Fidelidade', link: '#' },
+    { texto: 'Unidades', link: '#' },
+    { texto: 'Produtos', link: '#' },
+  ];
+
   return (
     <div className="App">
       <header className="cabecalho">
@@ -23,25 +31,15 @@ function App() {
         <Menu aberto={menuAberto} toggle={toggleMenu} />
 
         <ul className={`cabecalho__navegacao ${menuAberto ? 'ativo' : ''}`}>
-          <CabecalhoNavegacao link="#" classe="cabecalho__link--ativo">
-            Início
-          </CabecalhoNavegacao>
-
-          <CabecalhoNavegacao link="#">
-            Barbeiros
-          </CabecalhoNavegacao>
-
-          <CabecalhoNavegacao link="#">
-            Planos Fidelidade
-          </CabecalhoNavegacao>
-
-          <CabecalhoNavegacao link="#">
-            Unidades
-          </CabecalhoNavegacao>
-
-          <CabecalhoNavegacao link="#">
-            Produtos
-          </CabecalhoNavegacao>
+          {linksMenu.map((item, index) => (
+            <CabecalhoNavegacao
+              key={index}
+              link={item.link}
+              classe={item.ativo ? 'cabecalho__link--ativo' : ''}
+            >
+              {item.texto}
+            </CabecalhoNavegacao>
+          ))}
         </ul>
       </header>
       <Main />
