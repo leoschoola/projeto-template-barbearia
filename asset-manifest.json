@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/projeto-template-barbearia/static/css/main.9aea803d.css",
-    "main.js": "/projeto-template-barbearia/static/js/main.31386b91.js",
+    "main.js": "/projeto-template-barbearia/static/js/main.6a7a745c.js",
     "static/js/453.989816bb.chunk.js": "/projeto-template-barbearia/static/js/453.989816bb.chunk.js",
     "index.html": "/projeto-template-barbearia/index.html",
     "main.9aea803d.css.map": "/projeto-template-barbearia/static/css/main.9aea803d.css.map",
-    "main.31386b91.js.map": "/projeto-template-barbearia/static/js/main.31386b91.js.map",
+    "main.6a7a745c.js.map": "/projeto-template-barbearia/static/js/main.6a7a745c.js.map",
     "453.989816bb.chunk.js.map": "/projeto-template-barbearia/static/js/453.989816bb.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9aea803d.css",
-    "static/js/main.31386b91.js"
+    "static/js/main.6a7a745c.js"
   ]
 }
