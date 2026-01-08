@@ -1,11 +1,17 @@
 import './Header-navigation.css';
+import { NavLink } from 'react-router-dom';
 
 function CabecalhoNavegacao({ link, classe, children }) {
     return (
         <li className="cabecalho__item">
-        <a href={link} className={`cabecalho__link ${classe}`}>
+        <NavLink
+            to={link}
+            className={({ isActive }) =>
+            `cabecalho__link ${classe} ${isActive ? 'cabecalho__link--ativo' : ''}`
+            }
+        >
             {children}
-        </a>
+      </NavLink>
         </li>
     );
 

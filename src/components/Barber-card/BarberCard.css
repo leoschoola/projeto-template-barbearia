@@ -1,0 +1,113 @@
+.barbeiros__cartoes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+.barbeiro__card {
+    background-color: var(--cor-branco);
+    border-radius: 0.8rem; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 350px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.barbeiro__card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); 
+}
+
+.barbeiro__imagem-container {
+    width: 100%;
+    border-radius: 0.8rem 0.8rem 0 0; 
+    overflow: hidden;
+}
+
+.barbeiro__foto {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.barbeiro__info {
+    padding: 1.5rem;
+    text-align: left;
+}
+
+.barbeiro__nome {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--cor-preto);
+    margin-bottom: 0.2rem;
+}
+
+.barbeiro__especialidade {
+    font-size: 1rem;
+    color: var(--cor-cinza);
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.barbeiro__detalhes {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #e9ecef;
+    margin-bottom: 1.5rem;
+}
+
+.barbeiro__rating, .barbeiro__experiencia {
+    display: flex;
+    align-items: center;
+    font-size: 0.95rem;
+    color: var(--cor-cinza);
+}
+
+.barbeiro__rating i, .barbeiro__experiencia i {
+    font-size: 1.1rem;
+    margin-right: 0.5rem;
+    color: var(--cor-cinza);
+}
+
+.barbeiro__rating .fa-star {
+    color: #ffc107;
+}
+
+.barbeiro__nota {
+    font-weight: 600;
+    color: var(--cor-preto);
+    margin-right: 0.3rem;
+}
+
+.barbeiro__avaliacoes {
+    font-weight: 400;
+    color: var(--cor-cinza);
+}
+
+.barbeiro__botao {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    background-color: var(--cor-branco);
+    color: var(--cor-preto);
+    border: 1px solid var(--cor-cinza); /* Borda cinza suave */
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.barbeiro__botao:hover {
+    background-color: var(--cor-preto);
+    color: var(--cor-branco);
+    border-color: var(--cor-preto);
+}
