@@ -1,9 +1,12 @@
+import { Link } from "react-router-dom"; // Importante para navegação interna
 import "./Main.css";
 
 const Main = () => {
   return (
-    <section className="principal__imagem hero"
-    style={{ backgroundImage: "url(/imagens/capa1.jpg)" }}>
+    <section 
+      className="principal__imagem hero"
+      style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/imagens/capa1.jpg)` }}
+    >
       <div className="hero__conteudo">
         <h3 className="principal__titulo">Estilo e Tradição em Cada Corte</h3>
         <p className="principal__descricao">
@@ -12,11 +15,12 @@ const Main = () => {
         </p>
 
         <div className="principal__botoes">
-          <a href="index-pg-agendar.html">
+          {/* Use Link para rotas internas em vez de href */}
+          <Link to="/agendar">
             <button className="principal__botao principal__botao--agendar">
               Agendar Agora
             </button>
-          </a>
+          </Link>
           <a href="#id-principal__servicos">
             <button className="principal__botao principal__botao--servicos">
               Ver Serviços
@@ -27,7 +31,7 @@ const Main = () => {
         <div className="principal__informacoes">
           <div className="principal__info">
             <img
-              src="./imagens/icon-relogio.png"
+              src={`${process.env.PUBLIC_URL}/imagens/icon-relogio.png`}
               alt="Ícone de relógio"
               className="principal__icone"
             />
@@ -36,7 +40,7 @@ const Main = () => {
           </div>
           <div className="principal__info">
             <img
-              src="./imagens/icon-estrela (1).png"
+              src={`${process.env.PUBLIC_URL}/imagens/icon-estrela (1).png`}
               alt="Ícone de estrela"
               className="principal__icone"
             />
@@ -45,7 +49,7 @@ const Main = () => {
           </div>
           <div className="principal__info">
             <img
-              src="./imagens/icon-medalha-branca.png"
+              src={`${process.env.PUBLIC_URL}/imagens/icon-medalha-branca.png`}
               alt="Ícone de medalha"
               className="principal__icone"
             />

@@ -4,7 +4,7 @@ const Header = ({ img, children }) => {
   return (
     <div className="cabecalho__logo">
       <img
-        src={`./imagens/${img}.png`}
+        src={`${process.env.PUBLIC_URL}/imagens/${img}.png`}
         alt={`Ícone do ${img}`}
         className="cabecalho__icone"
       />
