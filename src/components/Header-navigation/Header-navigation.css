@@ -1,29 +1,35 @@
-.cabecalho__link--ativo {
-  background-color: #ededed;
-  color: var(--cor-preto);
-  font-weight: 700;
-  display: block;
-  padding: 0.2rem 0;
-  border-radius: 0.3rem;
-}
-
 .cabecalho__link {
+  display: block;
   text-decoration: none;
   color: var(--cor-preto);
   font-weight: 500;
+  padding: 0.45rem 0.6rem;
+  border-radius: 0.4rem;
+  transition: background-color 0.2s ease;
 }
 
+.cabecalho__link:hover {
+  background-color: #f2f2f2;
+}
+
+/* link ativo */
+.cabecalho__link--ativo {
+  background-color: #ededed;
+  font-weight: 700;
+}
+
+/* menu hamburguer */
 .cabecalho__navegacao {
   display: none;
   flex-direction: column;
   background-color: var(--cor-branco);
   position: absolute;
-  top: 4.375rem; 
+  top: 4.375rem;
   right: 1rem;
-  width: 12.5rem;
+  width: 13.5rem;
   padding: 1rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  border-radius: 0.75rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
   text-align: left;
   z-index: 100;
 }
@@ -34,5 +40,33 @@
 
 .cabecalho__navegacao li {
   list-style: none;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.cabecalho__link--botao {
+  margin-top: 0.75rem;
+  background-color: black;
+  color: white;
+  font-weight: 600;
+  text-align: center;
+  padding: 0.65rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+}
+
+.cabecalho__link--botao:hover {
+  background-color: #3C3D37;
+}
+
+.cabecalho__link--botao.cabecalho__link--ativo {
+  background-color: #3C3D37;
+}
+
+.cabecalho__navegacao.ativo .cabecalho__link--botao {
+  width: 100%;
+}
+
+.cabecalho__navegacao li:last-child {
+  display: flex;
+  justify-content: center;
 }

@@ -9,7 +9,7 @@ import Footer from './components/Footer';
 
 import Home from './pages/Home';
 import BarberPage from './pages/BarberPage';
-// import Produtos from './pages/Produtos';
+import AgendarPage from './pages/AgendarPage';
 
 function App() {
   const [menuAberto, setMenuAberto] = useState(false);
@@ -24,6 +24,11 @@ function App() {
     { texto: 'Planos Fidelidade', link: '/planos' },
     { texto: 'Unidades', link: '/unidades' },
     { texto: 'Produtos', link: '/produtos' },
+    {
+      texto: 'Agendar horário',
+      link: '/agendar',
+      destaque: true,
+    },
   ];
 
   return (
@@ -36,7 +41,7 @@ function App() {
 
           <ul className={`cabecalho__navegacao ${menuAberto ? 'ativo' : ''}`}>
             {linksMenu.map((item, index) => (
-              <CabecalhoNavegacao key={index} link={item.link}>
+              <CabecalhoNavegacao key={index} link={item.link} destaque={item.destaque}>
                 {item.texto}
               </CabecalhoNavegacao>
             ))}
@@ -46,7 +51,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/barbeiros" element={<BarberPage />} />
-          {/* <Route path="/produtos" element={<Produtos />} /> */}
+          <Route path="/agendar" element={<AgendarPage />} />
         </Routes>
 
         <Footer />

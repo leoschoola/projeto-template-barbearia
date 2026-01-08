@@ -1,12 +1,15 @@
 import './BarberPage.css'
-import Barber from '../components/Barber';
+import TituloTextoPadrao from '../components/TituloTextoPadrao';
 import BarberCard from '../components/Barber-card';
 
 function BarberPage() {
     return (
         <>
         <main className='principal__barbeiro'>
-            <Barber/>
+            <TituloTextoPadrao
+                titulo='Nossos Barbeiros'
+                texto='Profissionais certificados e experientes prontos para cuidar do seu visual'
+            />
             <BarberCard
                 img='barbeiros'
                 nome='Carlos Silva'
@@ -20,5 +23,5 @@ function BarberPage() {
         </>
     )
 }
-
+// titulo, texto
 export default BarberPage;
