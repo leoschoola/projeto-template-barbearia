@@ -1,0 +1,292 @@
+/* -------------------------------------- */
+/* --- ESTILOS DA PÁGINA PLANOS --- */
+/* -------------------------------------- */
+
+/* CHAVE: Compensa o cabeçalho fixo e define o padding da página */
+.principal__planos {
+    padding-top: 5rem; 
+    padding-bottom: 3rem;
+    background-color: var(--cor-branco);
+}
+
+/* --- Título e Cabeçalho da Seção --- */
+
+.planos__cabecalho {
+    text-align: center;
+    padding: 2rem 1rem 1rem;
+}
+
+.planos__titulo {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--cor-preto);
+    margin-bottom: 0.5rem;
+}
+
+.planos__descricao {
+    font-size: 1rem;
+    color: var(--cor-cinza);
+    margin-bottom: 2rem;
+}
+
+/* --- Container dos Cartões (Mobile: empilhado e centralizado) --- */
+
+.planos__cards-container {
+    display: flex;
+    flex-direction: column; /* Empilha os cartões */
+    align-items: center;    /* Centraliza os cartões */
+    gap: 3rem;              /* Espaço grande entre os cartões */
+    padding: 0 1rem;
+}
+
+/* --- Estilo Base do Cartão de Plano --- */
+
+.plano__card {
+    background-color: var(--cor-branco);
+    border-radius: 0.8rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+    width: 100%;
+    max-width: 18.75rem;
+    padding: 1.5rem;
+    text-align: left;
+    position: relative; /* Necessário para a tag "Mais Popular" */
+    overflow: hidden; /* Garante que a tag fique no canto */
+    transition: transform 0.3s ease;
+}
+
+/* --- Ícones dos Planos --- */
+
+.plano__icone-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    margin-bottom: 0.5rem;
+}
+
+.plano__icone-container i {
+    font-size: 1.5rem;
+    color: var(--cor-branco);
+}
+
+/* Cores específicas para cada plano */
+/* Bronze (Raio) e Ouro (Coroa) parecem usar um laranja/amarelo forte */
+.plano__card--bronze .plano__icone-container,
+.plano__card--ouro .plano__icone-container {
+    background-color: #ff9900; /* Laranja/Amarelo Forte */
+}
+
+/* Prata (Estrela) usa um cinza/prata claro */
+.plano__card--prata .plano__icone-container {
+    background-color: #ced4da; /* Cinza claro */
+}
+
+.plano__card--prata .plano__icone-container i {
+    color: var(--cor-cinza); /* Ícone preto/cinza escuro no fundo prata */
+}
+
+/* --- Texto do Plano --- */
+
+.plano__nome {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--cor-preto);
+    margin-bottom: 0.2rem;
+}
+
+.plano__subtitulo {
+    font-size: 1rem;
+    color: var(--cor-cinza);
+    margin-bottom: 1rem;
+}
+
+.plano__preco {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--cor-preto);
+    margin-bottom: 1rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid #e9ecef; /* Linha de separação */
+}
+
+/* --- Benefícios (Lista) --- */
+
+.plano__beneficios {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1rem;
+}
+
+.plano__item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+    color: var(--cor-cinza);
+    margin-bottom: 0.6rem;
+    line-height: 1.2;
+}
+
+.plano__item i {
+    /* Ícone de check verde suave */
+    color: #4CAF50; 
+    font-size: 1.1rem;
+}
+
+
+/* --- Botão de Assinatura --- */
+
+.plano__botao {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Botão Padrão (Bronze, Ouro) - Contorno */
+.plano__botao--bronze, .plano__botao--ouro {
+    background-color: var(--cor-branco);
+    color: var(--cor-preto);
+    border: 1px solid var(--cor-cinza);
+}
+
+.plano__botao--bronze:hover, .plano__botao--ouro:hover {
+    background-color: var(--cor-preto);
+    color: var(--cor-branco);
+    border-color: var(--cor-preto);
+}
+
+/* Botão Prata (Mais Popular) - Preenchido (Invertido) */
+.plano__botao--prata {
+    background-color: var(--cor-preto);
+    color: var(--cor-branco);
+    border: 1px solid var(--cor-preto);
+}
+
+.plano__botao--prata:hover {
+    background-color: var(--cor-cinza);
+    border-color: var(--cor-cinza);
+}
+
+
+/* --- Tag "Mais Popular" (Apenas Plano Prata) --- */
+
+.plano__tag {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--cor-preto);
+    color: var(--cor-branco);
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.4rem 1.5rem;
+    
+    /* Cria o efeito de recorte no canto superior direito */
+    border-radius: 0 0.8rem 0 0.8rem; 
+    
+    /* Empurra para o canto superior direito */
+    transform: translate(0, 0); 
+}
+
+/* --- Aviso de Cancelamento Final --- */
+
+.planos__aviso {
+    text-align: center;
+    padding: 3rem 1.5rem 0;
+}
+
+.planos__aviso p {
+    font-size: 0.9rem;
+    color: var(--cor-cinza);
+}
+
+/* -------------------------------------- */
+/* --- MEDIA QUERY: LAYOUT DESKTOP (PLANOS) --- */
+/* -------------------------------------- */
+
+@media (min-width: 768px) {
+    
+    /* --- AJUSTES GLOBAIS DE PÁGINA --- */
+    
+    .principal__planos {
+        padding-bottom: 5rem;
+    }
+
+    .planos__cabecalho {
+        padding: 4rem 2rem 2rem;
+    }
+
+    .planos__titulo {
+        font-size: 2.2rem;
+    }
+
+    /* --- CONTAINER DOS CARTÕES (HORIZONTAL) --- */
+    
+    .planos__cards-container {
+        flex-direction: row; /* CHAVE: Alinha os cartões lado a lado */
+        justify-content: center;
+        align-items: flex-start; /* Alinha no topo para que o Plano Prata fique centralizado */
+        gap: 1.5rem; /* Espaçamento entre os cartões */
+        padding: 0 2rem;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+    
+    /* --- ESTILO BASE DO CARTÃO NO DESKTOP --- */
+
+    .plano__card {
+        /* Permite que o Flexbox controle a largura, mas mantém um tamanho base */
+        max-width: 300px; 
+        width: 100%;
+        
+        /* Ajuste fino do padding e fontes */
+        padding: 2rem 1.5rem; 
+    }
+
+    /* --- DESTAQUE PARA O PLANO PRATA (MAIS POPULAR) --- */
+
+    .plano__card--prata {
+        /* CHAVE: Torna o card Prata mais alto e destacado */
+        transform: scale(1.05); /* Aumenta ligeiramente o card */
+        order: -1; /* Força o Prata para o meio na ordem visual (se usar flex-direction: row) */
+        
+        /* Borda e Sombra mais escura para o destaque */
+        border: 2px solid var(--cor-preto); 
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); 
+    }
+    
+    .plano__card--prata .plano__icone-container {
+        /* Para o ícone do Prata: Inverte a cor para combinar com a borda escura */
+        background-color: var(--cor-preto);
+        border: none;
+    }
+
+    .plano__card--prata .plano__icone-container i {
+        /* Ícone de estrela branco */
+        color: var(--cor-branco);
+    }
+    
+    /* Ajusta a ordem para que o Prata fique no meio (1. Bronze, 2. Prata, 3. Ouro) */
+    .plano__card--bronze {
+        order: 1; 
+    }
+    .plano__card--prata {
+        order: 2;
+    }
+    .plano__card--ouro {
+        order: 3;
+    }
+
+    /* --- Aviso de Cancelamento Final --- */
+    
+    .planos__aviso {
+        padding: 3rem 1.5rem;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+}

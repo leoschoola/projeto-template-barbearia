@@ -10,6 +10,9 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import BarberPage from './pages/BarberPage';
 import AgendarPage from './pages/AgendarPage';
+import PlanosPage from './pages/PlanosPage';
+import UnidadesPage from './pages/UnidadesPage';
+import ProductsPage from './pages/ProductsPage';
 
 function App() {
   const [menuAberto, setMenuAberto] = useState(false);
@@ -32,7 +35,7 @@ function App() {
   ];
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/projeto-template-barbearia">
       <div className="App">
         <header className="cabecalho">
           <Header img="icon-tesoura">Barbearia Fah Cortes</Header>
@@ -52,6 +55,9 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/barbeiros" element={<BarberPage />} />
           <Route path="/agendar" element={<AgendarPage />} />
+          <Route path="/planos" element={<PlanosPage />} />
+          <Route path="/unidades" element={<UnidadesPage />} />
+          <Route path="/produtos" element={<ProductsPage />} />
         </Routes>
 
         <Footer />

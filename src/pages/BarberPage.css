@@ -3,3 +3,32 @@
     padding-bottom: 3rem;
     background-color: var(--cor-branco);
 }
+
+.planos__cards-container {
+    display: flex;
+    flex-direction: column; /* Empilha os cartões */
+    align-items: center;    /* Centraliza os cartões */
+    gap: 3rem;              /* Espaço grande entre os cartões */
+    padding: 0 1rem;
+}
+
+.produtos__final {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.produtos__ver-todos {
+    background-color: var(--cor-preto);
+    color: var(--cor-branco);
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.produtos__ver-todos:hover {
+    background-color: var(--cor-cinza);
+}
