@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/projeto-template-barbearia/static/css/main.9aea803d.css",
-    "main.js": "/projeto-template-barbearia/static/js/main.6a7a745c.js",
+    "main.css": "/projeto-template-barbearia/static/css/main.ad311faf.css",
+    "main.js": "/projeto-template-barbearia/static/js/main.b19d9a85.js",
     "static/js/453.989816bb.chunk.js": "/projeto-template-barbearia/static/js/453.989816bb.chunk.js",
     "index.html": "/projeto-template-barbearia/index.html",
-    "main.9aea803d.css.map": "/projeto-template-barbearia/static/css/main.9aea803d.css.map",
-    "main.6a7a745c.js.map": "/projeto-template-barbearia/static/js/main.6a7a745c.js.map",
+    "main.ad311faf.css.map": "/projeto-template-barbearia/static/css/main.ad311faf.css.map",
+    "main.b19d9a85.js.map": "/projeto-template-barbearia/static/js/main.b19d9a85.js.map",
     "453.989816bb.chunk.js.map": "/projeto-template-barbearia/static/js/453.989816bb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9aea803d.css",
-    "static/js/main.6a7a745c.js"
+    "static/css/main.ad311faf.css",
+    "static/js/main.b19d9a85.js"
   ]
 }
