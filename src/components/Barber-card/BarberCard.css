@@ -14,6 +14,7 @@
     max-width: 350px;
     overflow: hidden;
     transition: transform 0.3s ease;
+    position: relative;
 }
 
 .barbeiro__card:hover {
@@ -110,4 +111,18 @@
     background-color: var(--cor-preto);
     color: var(--cor-branco);
     border-color: var(--cor-preto);
+}
+
+.deletar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: black;
+    cursor: pointer;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.deletar:hover {
+    transform: scale(1.1);
 }

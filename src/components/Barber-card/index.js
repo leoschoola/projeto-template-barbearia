@@ -1,10 +1,11 @@
 import './BarberCard.css';
+import { AiFillCloseCircle } from "react-icons/ai";
 
-const BarberCard = ({ img, nome, especialidade, nota, avaliacao, experiencia, agendar }) => {
+const BarberCard = ({ img, nome, especialidade, nota, avaliacao, experiencia, agendar, aoDeletar }) => {
     return (
         <section className="barbeiros__cartoes">
             <article className="barbeiro__card">
-                
+                <AiFillCloseCircle size={25} className='deletar' onClick={aoDeletar}/>
                 <div className="barbeiro__imagem-container">
                     {/* Adicionado process.env.PUBLIC_URL para corrigir o caminho no GitHub Pages */}
                     <img 

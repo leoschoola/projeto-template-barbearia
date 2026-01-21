@@ -2,6 +2,10 @@ import './BarberPage.css'
 import TituloTextoPadrao from '../components/TituloTextoPadrao';
 import BarberCard from '../components/Barber-card';
 
+function deletarColaborador() {
+    
+  }
+
 function BarberPage() {
     return (
         <>
@@ -18,6 +22,7 @@ function BarberPage() {
                 avaliacao='(230)'
                 experiencia='12 anos de experiência'
                 agendar='Agendar com Carlos'
+                aoDeletar={deletarColaborador}
             />
         </main>
         </>
