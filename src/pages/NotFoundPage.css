@@ -1,0 +1,82 @@
+.notfound-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 1.5rem 3rem;
+  background-color: var(--cor-branco);
+}
+
+.notfound-card {
+  text-align: center;
+  max-width: 480px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.notfound-icone {
+  font-size: 3rem;
+  color: var(--cor-preto);
+  opacity: 0.15;
+  line-height: 1;
+}
+
+.notfound-codigo {
+  font-size: clamp(5rem, 20vw, 8rem);
+  font-weight: 700;
+  color: var(--cor-preto);
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.notfound-titulo {
+  font-size: clamp(1.2rem, 4vw, 1.6rem);
+  font-weight: 600;
+  color: var(--cor-preto);
+}
+
+.notfound-descricao {
+  font-size: 0.95rem;
+  color: var(--cor-cinza);
+  line-height: 1.6;
+  max-width: 340px;
+}
+
+.notfound-divisor {
+  width: 3rem;
+  height: 3px;
+  background-color: var(--cor-preto);
+  border-radius: 2px;
+  opacity: 0.15;
+}
+
+.notfound-botao {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.85rem 2rem;
+  background-color: var(--cor-preto);
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-family: var(--fonte);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  text-decoration: none;
+}
+
+.notfound-botao:hover {
+  background-color: var(--cor-cinza);
+}
+
+@media (min-width: 480px) {
+  .notfound-card {
+    gap: 1.25rem;
+  }
+}

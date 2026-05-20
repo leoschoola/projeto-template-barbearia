@@ -1,0 +1,17 @@
+.barbeiros__cabecalho {
+    text-align: center;
+    padding: 2rem 1rem 1rem;
+}
+
+.barbeiros__titulo {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--cor-preto);
+    margin-bottom: 0.5rem;
+}
+
+.barbeiros__descricao {
+    font-size: 1rem;
+    color: var(--cor-cinza);
+    margin-bottom: 2rem;
+}

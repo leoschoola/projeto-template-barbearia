@@ -1,0 +1,20 @@
+.cabecalho__logo {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.cabecalho__logo:hover {
+    opacity: 0.8;
+}
+
+.cabecalho__icone {
+    width: 2rem;
+    height: 2rem;
+}
+
+.cabecalho__titulo {
+    font-weight: 300;
+}

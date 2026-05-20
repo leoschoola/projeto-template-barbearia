@@ -1,0 +1,144 @@
+:root{
+    --fonte: 'Montserrat', sans-serif;
+    --cor-preto: #181C14;
+    --cor-branco: #F4F4F4;
+    --cor-cinza: #3C3D37;  
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: var(--cor-branco);
+}
+
+.cabecalho {
+    background-color: var(--cor-branco);
+    color: var(--cor-preto);
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.625rem;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    border-bottom: 1px solid rgba(60, 61, 55, 0.2);
+    box-sizing: border-box;
+}
+
+.dev__btn-admin {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 9999;
+    background-color: #e53e3e;
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    font-family: var(--fonte);
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    opacity: 0.85;
+}
+
+.dev__btn-admin:hover {
+    opacity: 1;
+}
+
+/* ======================================
+   BREAKPOINTS PADRÃO - Responsividade
+   ======================================
+
+   Mobile-first: começar no mobile (0px)
+   depois adicionar media queries.
+
+   Breakpoints principais:
+   - 480px:  Tablet pequeno
+   - 600px:  Tablet médio
+   - 768px:  Tablet grande / Notebook pequeno
+   - 1024px: Notebook
+   - 1200px: Desktop grande
+   - 1440px: Ultra wide
+
+   Exemplo de uso em componente:
+
+   .meu-componente {
+       grid-template-columns: 1fr;  // mobile
+   }
+
+   @media (min-width: 600px) {
+       .meu-componente {
+           grid-template-columns: repeat(2, 1fr);
+       }
+   }
+
+   @media (min-width: 768px) {
+       .meu-componente {
+           grid-template-columns: repeat(3, 1fr);
+       }
+   }
+
+   @media (min-width: 1024px) {
+       .meu-componente {
+           grid-template-columns: repeat(4, 1fr);
+       }
+   }
+
+   ====================================== */
+
+/* ======================================
+   TIPOGRAFIA RESPONSIVA
+   ====================================== */
+
+h1 {
+    font-size: clamp(1.8rem, 5vw, 3.5rem);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: clamp(1.5rem, 4vw, 2.8rem);
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+h3 {
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+h4 {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    font-weight: 600;
+}
+
+h5 {
+    font-size: clamp(0.95rem, 2vw, 1.3rem);
+    font-weight: 600;
+}
+
+h6 {
+    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+    font-weight: 600;
+}
+
+p {
+    font-size: clamp(0.9rem, 1.5vw, 1.05rem);
+    line-height: 1.6;
+}
+
+/* ====================================== */

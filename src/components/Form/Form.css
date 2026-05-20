@@ -1,0 +1,184 @@
+/* --- Seção de Agendamento --- */
+
+.agendamento-secao {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 1.25rem 1rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    margin: 1rem auto 1.5rem;
+}
+
+/* --- Formulário --- */
+
+.agendamento-formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+}
+
+.input-grupo,
+.select-grupo {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-rotulo,
+.select-rotulo {
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 0.35rem;
+    display: block;
+    color: #333;
+}
+
+/* --- Inputs / Selects --- */
+
+.input-container,
+.select-container {
+    display: flex;
+    align-items: center;
+    border: 1.5px solid #ddd;
+    border-radius: 0.5rem;
+    padding: 0.7rem 0.9rem;
+    background-color: #f9f9f9;
+    position: relative;
+    min-height: 2.75rem;
+    transition: border-color 0.2s ease;
+}
+
+.input-container:focus-within,
+.select-container:focus-within {
+    border-color: #333;
+    background-color: #fff;
+}
+
+.input-container i,
+.select-container i {
+    margin-right: 0.75rem;
+    min-width: 1.1rem;
+    text-align: center;
+    color: #666;
+    font-size: 0.95rem;
+    flex-shrink: 0;
+}
+
+.input-container input,
+.select-container select,
+.select-container input[type="date"] {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 0.95rem;
+    color: #222;
+    min-height: 1.4rem;
+}
+
+/* Placeholder */
+.input-container input::placeholder {
+    color: #bbb;
+    font-size: 0.9rem;
+}
+
+/* Seta customizada */
+.select-icone-seta {
+    position: absolute;
+    right: 0.8rem;
+    pointer-events: none;
+    font-size: 0.7rem;
+    color: #555;
+}
+
+/* --- Validação --- */
+
+.input-container.input--invalido,
+.select-container.input--invalido {
+    border-color: #c0392b;
+}
+
+/* --- Botões --- */
+
+.botao-confirmar,
+.botao-limpar {
+    width: 100%;
+    padding: 0.85rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    margin-top: 0.25rem;
+    transition: all 0.2s ease;
+}
+
+.botao-confirmar {
+    background: #111;
+    color: #fff;
+    border: none;
+}
+
+.botao-confirmar:hover {
+    background: #333;
+}
+
+.botao-limpar {
+    background: transparent;
+    border: 1.5px solid #111;
+    color: #111;
+}
+
+.botao-limpar:hover {
+    background: #f0f0f0;
+}
+
+/* --- Tablet médio - 640px --- */
+
+@media (min-width: 640px) {
+    .agendamento-secao {
+        padding: 1.5rem;
+    }
+
+    .agendamento-formulario {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .observacoes {
+        grid-column: 1 / -1;
+    }
+
+    .botao-confirmar,
+    .botao-limpar {
+        margin-top: 0;
+    }
+}
+
+/* --- Tablet grande / Notebook - 768px --- */
+
+@media (min-width: 768px) {
+    .agendamento-secao {
+        max-width: 900px;
+        padding: 2rem;
+    }
+
+    .agendamento-formulario {
+        gap: 1.25rem;
+    }
+
+    .botao-confirmar {
+        grid-column: 1 / 2;
+    }
+
+    .botao-limpar {
+        grid-column: 2 / 3;
+    }
+}
+
+/* --- Desktop - 1024px --- */
+
+@media (min-width: 1024px) {
+    .agendamento-secao {
+        padding: 2.5rem;
+    }
+}

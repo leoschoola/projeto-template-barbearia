@@ -1,0 +1,198 @@
+.modal__overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 1rem;
+}
+
+.modal__caixa {
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  width: calc(100% - 2rem);
+  max-width: 28rem;
+  max-height: calc(100vh - 2rem);
+  overflow-y: auto;
+  animation: modalEntrar 0.18s ease;
+}
+
+@keyframes modalEntrar {
+  from { opacity: 0; transform: scale(0.96); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.modal__cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid #e9ecef;
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 1;
+}
+
+.modal__titulo {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--cor-preto);
+}
+
+.modal__fechar {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--cor-cinza);
+  display: flex;
+  align-items: center;
+  padding: 0;
+  transition: color 0.2s ease;
+}
+
+.modal__fechar:hover {
+  color: var(--cor-preto);
+}
+
+.modal__conteudo {
+  padding: 1.5rem;
+}
+
+/* ---- Formulário dentro do modal ---- */
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.modal__campo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.modal__campo label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--cor-preto);
+}
+
+.modal__campo input,
+.modal__campo select,
+.modal__campo textarea {
+  padding: 0.65rem 0.8rem;
+  border: 1.5px solid rgba(60, 61, 55, 0.3);
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+  font-family: var(--fonte);
+  color: var(--cor-preto);
+  background-color: #fafafa;
+  transition: border-color 0.2s ease;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.modal__campo input:focus,
+.modal__campo select:focus,
+.modal__campo textarea:focus {
+  border-color: var(--cor-preto);
+  background-color: #fff;
+}
+
+.modal__campo select {
+  cursor: pointer;
+}
+
+.modal__campo textarea {
+  resize: vertical;
+  min-height: 6rem;
+  line-height: 1.5;
+}
+
+.modal__dica {
+  font-size: 0.78rem;
+  color: var(--cor-cinza);
+}
+
+.modal__botao-salvar {
+  margin-top: 0.25rem;
+  width: 100%;
+  padding: 0.75rem;
+  background-color: var(--cor-preto);
+  color: var(--cor-branco);
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: var(--fonte);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.modal__botao-salvar:hover {
+  background-color: var(--cor-cinza);
+}
+
+.modal__imagem-previa {
+  width: 100%;
+  max-height: 150px;
+  object-fit: cover;
+  border-radius: 0.4rem;
+  margin-top: 0.4rem;
+  border: 1px solid #e9ecef;
+  display: block;
+}
+
+/* --- Tablet médio - 600px --- */
+
+@media (min-width: 600px) {
+  .modal__caixa {
+    max-width: 500px;
+  }
+
+  .modal__cabecalho {
+    padding: 1.5rem 2rem;
+  }
+
+  .modal__conteudo {
+    padding: 2rem;
+  }
+}
+
+/* --- Tablet grande / Notebook - 768px --- */
+
+@media (min-width: 768px) {
+  .modal__caixa {
+    max-width: 600px;
+  }
+
+  .modal__titulo {
+    font-size: 1.3rem;
+  }
+
+  .modal__campo label {
+    font-size: 0.95rem;
+  }
+
+  .modal__imagem-previa {
+    max-height: 200px;
+  }
+}
+
+/* --- Desktop - 1024px --- */
+
+@media (min-width: 1024px) {
+  .modal__caixa {
+    max-width: 700px;
+  }
+
+  .modal__conteudo {
+    padding: 2.5rem;
+  }
+}

@@ -1,0 +1,17 @@
+.secao__servicos {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.principal__servicos {
+    color: var(--cor-preto);
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.principal__paragrafo {
+    color: var(--cor-cinza);
+    margin-bottom: 2rem;
+    padding: 0 1rem; 
+}

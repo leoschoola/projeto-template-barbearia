@@ -1,0 +1,55 @@
+.cadastro-card {
+  max-width: 24rem;
+}
+
+.cadastro-select {
+  padding: 0.65rem 0.8rem;
+  border: 1.5px solid rgba(60, 61, 55, 0.3);
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+  font-family: var(--fonte);
+  color: var(--cor-preto);
+  background-color: #fafafa;
+  transition: border-color 0.2s ease;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.cadastro-select:focus {
+  border-color: var(--cor-preto);
+  background-color: #fff;
+}
+
+.login-sucesso {
+  font-size: 0.85rem;
+  color: #276749;
+  background-color: #f0fff4;
+  border: 1px solid #9ae6b4;
+  border-radius: 0.4rem;
+  padding: 0.5rem 0.75rem;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* --- Tablet - 768px --- */
+
+@media (min-width: 768px) {
+  .cadastro-card {
+    max-width: 500px;
+    padding: 3rem 2.5rem;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+  }
+
+  .cadastro-select {
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+  }
+
+  .login-sucesso {
+    font-size: 0.95rem;
+    padding: 0.75rem 1rem;
+  }
+}

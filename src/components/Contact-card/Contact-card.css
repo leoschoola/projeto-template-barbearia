@@ -1,0 +1,56 @@
+.secao__contato {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.contato__card {
+    background-color: #e6ffec; /* Fundo verde muito claro para sugerir o WhatsApp */
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 2rem;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.contato__icone {
+    font-size: 2.5rem;
+    color: #25D366; /* Verde icônico do WhatsApp */
+    margin-bottom: 0.5rem;
+}
+
+.contato__titulo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--cor-preto);
+    margin-bottom: 0.5rem;
+}
+
+.contato__descricao {
+    font-size: 0.95rem;
+    color: var(--cor-cinza);
+    margin-bottom: 1.5rem;
+}
+
+.contato__botao-link {
+    text-decoration: none;
+    display: block;
+}
+
+.contato__botao {
+    width: 100%;
+    padding: 0.8rem 1.25rem;
+    border: none;
+    border-radius: 0.3rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 1rem;
+    
+    /* CHAVE: Estilo do botão de ação */
+    background-color: #25D366; /* Verde do WhatsApp */
+    color: var(--cor-branco);
+    transition: background-color 0.3s ease;
+}
+
+.contato__botao:hover {
+    background-color: #1FAF5F; /* Verde um pouco mais escuro no hover */
+}

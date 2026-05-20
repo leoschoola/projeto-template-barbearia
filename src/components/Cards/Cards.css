@@ -1,0 +1,103 @@
+/* --- Container de Cards (Mobile: flex column) --- */
+
+.servicos__cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 0 1rem;
+  margin-top: 3rem;
+}
+
+.card {
+  background-color: var(--cor-branco);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card:hover .icon {
+  background-color: #dadada;
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--cor-preto);
+  margin: 0.5rem 0;
+}
+
+.card p {
+  color: var(--cor-cinza);
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+
+.card__preco {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--cor-preto);
+}
+
+.card .icon {
+  font-size: 1.5rem;
+  color: var(--cor-preto);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: #e9ecef;
+}
+
+/* --- Responsividade --- */
+
+/* Tablet pequeno - 480px (2 colunas) */
+@media (min-width: 480px) {
+  .servicos__cards-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+}
+
+/* Tablet médio - 600px (2 colunas com mais espaço) */
+@media (min-width: 600px) {
+  .servicos__cards-container {
+    gap: 1.75rem;
+    padding: 0 1.5rem;
+  }
+}
+
+/* Tablet grande - 768px (4 colunas em grid) */
+@media (min-width: 768px) {
+  .servicos__cards-container {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    padding: 0 2rem;
+    max-width: 1200px;
+    margin: 3rem auto;
+  }
+
+  .card {
+    padding: 2rem 1.5rem;
+  }
+}
+
+/* Desktop - 1024px+ (espaçamento maior) */
+@media (min-width: 1024px) {
+  .servicos__cards-container {
+    gap: 2.5rem;
+    padding: 0 3rem;
+    max-width: 1400px;
+  }
+}
